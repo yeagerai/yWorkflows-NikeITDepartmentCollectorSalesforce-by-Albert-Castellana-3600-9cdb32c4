@@ -2,5 +2,7 @@ description: This Yeager workflow is designed to authenticate using SalesforceCr
   and retrieves Nike Company IT department data from the specified API_URL. The resulting
   output is a Status object to indicate whether the data was sent to Salesforce successfully
   or not.
+input-class: SalesforceCredentials
 name: NikeITDepartmentCollectorSalesforce
+output-class: NikeITDepartmentCollectorSalesforceIn
 parameters: {}
