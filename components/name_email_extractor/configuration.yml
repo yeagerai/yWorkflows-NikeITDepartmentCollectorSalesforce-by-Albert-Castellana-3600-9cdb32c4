@@ -1,0 +1,6 @@
+description: Receives the data collected by the NikeITDepartmentCollector component,
+  iterates over the JSON response, and extracts the names and email addresses (if
+  available) of the personas. Returns a list of dictionaries containing 'name' and
+  'email' as keys.
+name: NameEmailExtractor
+parameters: {}
