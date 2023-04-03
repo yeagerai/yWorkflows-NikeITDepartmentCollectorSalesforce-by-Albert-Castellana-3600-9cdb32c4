@@ -2,5 +2,7 @@ description: Receives the data collected by the NikeITDepartmentCollector compon
   iterates over the JSON response, and extracts the names and email addresses (if
   available) of the personas. Returns a list of dictionaries containing 'name' and
   'email' as keys.
+input-class: NameEmailExtractorInputDict
 name: NameEmailExtractor
+output-class: NameEmailExtractorOutputDict
 parameters: {}
