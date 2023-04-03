@@ -2,6 +2,8 @@ description: Receives the extracted name and email list from the NameEmailExtrac
   component, connects to Salesforce using the provided SalesforceCredentials, and
   uploads the data. Finally, returns a status message with the indication whether
   data sending was successful or not.
+input-class: SalesforceDataSenderInputDict
 name: SalesforceDataSender
+output-class: SalesforceDataSenderOutputDict
 parameters:
   salesforce_credentials: salesforce_credentials.yml
