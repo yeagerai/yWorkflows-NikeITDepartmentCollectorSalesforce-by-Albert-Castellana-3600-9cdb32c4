@@ -4,6 +4,8 @@ description: The NikeITDepartmentCollector component is designed to collect info
   in the IT Department. After receiving the API response, this component parses the
   response to extract relevant information such as names and emails of the personas
   in that department.
+input-class: NikeITDepartmentCollectorInputDict
 name: NikeITDepartmentCollector
+output-class: NikeITDepartmentCollectorOutputDict
 parameters:
   api_endpoint: https://api.nike.com/it_department_personas
