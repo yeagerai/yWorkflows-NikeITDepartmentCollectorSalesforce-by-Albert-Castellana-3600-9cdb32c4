@@ -1,0 +1,29 @@
+yaml
+components:
+  node-0:
+    class: NikeITDepartmentCollector
+    module-path: components/nike_it_department_collector/nike_it_department_collector.py
+    configuration: !include components/nike_it_department_collector/configuration.yml
+  
+  node-1:
+    class: NameEmailExtractor
+    module-path: components/name_email_extractor/name_email_extractor.py
+    configuration: !include components/name_email_extractor/configuration.yml
+
+  node-2:
+    class: SalesforceDataSender
+    module-path: components/salesforce_data_sender/salesforce_data_sender.py
+    configuration: !include components/salesforce_data_sender/configuration.yml
+
+flow-matrix:
+  [
+    [0, 1, 0],
+    [0, 0, 1],
+    [0, 0, 0],
+  ]
+
+mapper:
+  node-0.NikeITDepartmentCollector.api_url: API_URL
+  node-1.NameEmailExtractor.data: node-0.NikeITDepartmentCollector.output_data
+  node-2.SalesforceDataSender.credentials: SalesforceCredentials
+  node-2.SalesforceDataSender.name_email_list: node-1.NameEmailExtractor.output_data
